@@ -1,0 +1,15 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name excursions.test;
+
+	root /var/www/excursions-frontend/public;
+	index index.html ;
+
+	server_name _;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
