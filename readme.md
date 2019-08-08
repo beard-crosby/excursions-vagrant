@@ -97,12 +97,9 @@ cd /var/www/excursions-frontend
 Then follow the instructions in the repos readme.
 
 ### Running both frontend and backend servers.
-It is possible to SSH into the vagrant box multiple times at once. So open two terminal windows on your mac and run the below on both:
+Instead of opening two terminals to run the backend and frontend. A package called `forever` is installed globally. Use this to run the dev servers and they will run in the background.
 
-```sh
-cd ~/vagrant
-vagrant ssh
-```
+[More Information](https://github.com/foreversd/forever)
 
 ### If the virtual machine is running slow
 Each virtual machine is allocated 2GB of RAM by default. You can increase this.
@@ -127,9 +124,8 @@ vb.memory = "2048"
 
 ## Development
 
-- Open two windows on your mac terminal.
+Open the terminal on your mac.
 
-- On one:
 ```sh
 cd ~/vargrant
 vagrant up
@@ -138,21 +134,11 @@ vagrant ssh
 # Wait for the machine to load
 
 cd /var/www/excursions-frontend
-# Run the development server
-```
-
-- On the other terminal window
-```sh
-cd ~/vagrant
-vagrant ssh
-
-# Wait for the machine to load
+forever start npm run start
 
 cd /var/www/excursions-backend
-# Run the development server
+forever start npm run dev
 ```
-
-> I will create a script that will run both dev servers from one window in the future.
 
 ---
 

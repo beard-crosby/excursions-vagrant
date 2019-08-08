@@ -10,3 +10,5 @@ nvm install --lts
 nvm use --lts
 
 npm i -g npx
+npm i -g forever
+npm i -g mongodb
