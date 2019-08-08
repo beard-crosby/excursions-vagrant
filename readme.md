@@ -19,27 +19,16 @@ mkdir ~/vagrant
 
 ```sh
 cd ~/vagrant
-git clone https:// .
+git clone https://github.com/beard-crosby/excursions-vagrant.git .
 ```
-
-- Create a directory called `sites`
-
-```sh
-mkdir ~/vagrant/sites
-```
-
-This is where you will clone the sites you work on.
 
 - Start the vagrant virtual machine.
 
-Before we start up the vagrant box, we will install a plugin to manage the disksize. (It will be set to 20GB)
-
 ```bash
-vagrant plugin install vagrant-disksize
 vagrant up
 ```
 
-The virtual machine will now install everything we need and begine running.
+The virtual machine will now install everything we need and begin running.
 
 If you want, you can see its status if you open the VirtualBox app.
 
@@ -57,7 +46,7 @@ If there were no errors in this step, carry on.
 
 In your browser, go to `192.168.33.10`.
 
-This should open a basic page that says "Welcome to nginx!"
+This should open a basic page that says "Welcome to nginx!" or something similar.
 
 If it does, carry on.
 
@@ -92,6 +81,7 @@ If you go to `http://excursions.test` in your browser now, you will probably see
 
 ```
 cd /var/www/excursions-frontend
+npm install
 ```
 
 Then follow the instructions in the repos readme.
@@ -100,25 +90,6 @@ Then follow the instructions in the repos readme.
 Instead of opening two terminals to run the backend and frontend. A package called `forever` is installed globally. Use this to run the dev servers and they will run in the background.
 
 [More Information](https://github.com/foreversd/forever)
-
-### If the virtual machine is running slow
-Each virtual machine is allocated 2GB of RAM by default. You can increase this.
-
-- Shutdown your vagrant box if it running.
-
-From your mac terminal:
-```sh
-cd ~/vagrant
-vagrant halt
-```
-
-- Open the `Vagrantfile` and find this line:
-
-```ruby
-vb.memory = "2048"
-```
-
-- Increate the number by however much you feel your computer can spare. The number is the about of MB of RAM allocated to the virtual machine while it is running.
 
 ---
 

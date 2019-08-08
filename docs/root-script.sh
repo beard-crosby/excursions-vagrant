@@ -12,8 +12,9 @@ apt-get install -y nginx
 service nginx start
 
 # Tidy
-rm /etc/nginx/sites-available/default
-rm -rf /var/www/html
+# rm /etc/nginx/sites-available/default
+# rm -rf /var/www/html
+echo "<!DOCTYPE html><html><head><title>Welcome to Nginx!</title></head><body><h1>Max Smells!</h1></body></html>" > /var/www/html/index.nginx-debian.html
 
 # Setup Excursions in Nginx
 cp /vagrant_docs/excursions.test /etc/nginx/sites-available
