@@ -73,15 +73,6 @@ You now have a virtual machine setup with the excursions project on it. Now we n
 
 We are going to set it up so that we can simple go to `http://excursions.test` in the browser and see the development site.
 
-- Add the nginx configuration files.
-
-```sh
-cd /etc/nginx/sites-available
-sudo cp /vagrant_docs/excursions.test .
-sudo ln -s /etc/nginx/sites-available/excursions.test /etc/nginx/sites-enabled/excursions.test
-sudo service nginx restart
-```
-
 - Open a new terminal window on your mac.
 
 Then add excursions.test to your hosts file.
