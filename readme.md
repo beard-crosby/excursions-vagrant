@@ -75,14 +75,18 @@ Add this line to the bottom of the file you have open:
 192.168.33.10 excursions.test
 ```
 
-If you go to `http://excursions.test` in your browser now, you will probably see a blank screen. This is because the development server isn't running at the moment.
+If you go to `http://excursions.test` in your browser now, you will probably see a blank screen or a 502 error. This is because the development server isn't running at the moment.
 
 - Back in your vagrant virtual machine, start the dev servers.
 
 ```
 cd /var/www/excursions-frontend
-npm install
+yarn
 ```
+
+> NOTE: Instead of `npm install` run `yarn`. This is due to a problem with npm that I am working on fixing.
+
+> NOTE: You will need to go to `http://excursions.test:3000` to enable to hot reloading on your browser.
 
 Then follow the instructions in the repos readme.
 

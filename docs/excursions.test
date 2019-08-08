@@ -4,12 +4,9 @@ server {
 
 	server_name excursions.test;
 
-	root /var/www/excursions-frontend/public;
-	index index.html ;
-
-	server_name _;
-
 	location / {
-		try_files $uri $uri/ =404;
+		proxy_set_header	X-Forwarded-For $remote_addr;
+		proxy_set_header	Host $http_host;
+		proxy_pass		"http://localhost:3000";
 	}
 }
