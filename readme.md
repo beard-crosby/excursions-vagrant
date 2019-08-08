@@ -104,7 +104,7 @@ Instead of opening two terminals to run the backend and frontend. A package call
 Open the terminal on your mac.
 
 ```sh
-cd ~/vargrant
+cd ~/vagrant
 vagrant up
 vagrant ssh
 
