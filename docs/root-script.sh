@@ -28,4 +28,8 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo service mongod start
 
+# Setup develop script
+cp /vagrant_docs/develop /usr/local/bin/
+chmod +x /usr/local/bin/GitDeploy
+
 apt-get install -y unattended-upgrades

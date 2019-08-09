@@ -1,0 +1,2 @@
+echo "Running frontend and backend dev servers"
+concurrently "npm run start --prefix /var/www/excursions-frontend" "npm run dev --prefix /var/www/excursions-backend"
