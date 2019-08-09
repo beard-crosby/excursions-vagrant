@@ -12,6 +12,9 @@ nvm use --lts
 npm i -g npx
 npm i -g pm2
 npm i -g mongodb
+npm i -g concurrently
+
+alias develop='concurrently "npm run start --prefix /var/www/excursions-frontend" "npm run dev --prefix /var/www/excursions-backend"'
 
 # Temporary Solution to install npm packages.
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
