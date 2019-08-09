@@ -10,7 +10,7 @@ nvm install --lts
 nvm use --lts
 
 npm i -g npx
-npm i -g forever
+npm i -g pm2
 npm i -g mongodb
 
 # Temporary Solution to install npm packages.

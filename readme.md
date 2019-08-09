@@ -91,11 +91,18 @@ yarn
 Then follow the instructions in the repos readme.
 
 ### Running both frontend and backend servers.
-Instead of opening two terminals to run the backend and frontend. A package called `forever` is installed globally. Use this to run the dev servers and they will run in the background.
+Instead of opening two terminals to run the backend and frontend. A package called `pm2` is installed globally. Use this to run the dev servers and they will run in the background.
 
-[More Information](https://github.com/foreversd/forever)
+```sh
+# Run an NPM script in the background
+pm2 start "npm run start"
 
-> Better instructions TBC...
+# See all running scripts
+pm2 list
+
+# Stop a pm2 script (You can see a script id with `pm2 list`)
+pm2 stop 0
+```
 
 ---
 
@@ -111,10 +118,11 @@ vagrant ssh
 # Wait for the machine to load
 
 cd /var/www/excursions-frontend
-forever start npm run start
+pm2 start "npm run start"
 
 cd /var/www/excursions-backend
-forever start npm run dev
+pm2 start "npm run db"
+pm2 start "npm run backend"
 ```
 
 ---
