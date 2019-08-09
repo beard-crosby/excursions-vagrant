@@ -30,6 +30,6 @@ sudo service mongod start
 
 # Setup develop script
 cp /vagrant_docs/develop /usr/local/bin/
-chmod +x /usr/local/bin/GitDeploy
+chmod +x /usr/local/bin/develop
 
 apt-get install -y unattended-upgrades
