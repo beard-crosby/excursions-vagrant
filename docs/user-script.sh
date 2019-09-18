@@ -9,7 +9,6 @@ export NVM_DIR="/home/vagrant/.nvm"
 nvm install --lts
 nvm use --lts
 
-npm i -g npx
 npm i -g pm2
 npm i -g mongodb
 npm i -g concurrently
